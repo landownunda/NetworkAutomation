@@ -12,3 +12,6 @@ Where to do go to find pyATS libraries?
 
 -https://github.com/CiscoTestAutomation/genielibs/blob/master/pkgs/ops-pkg/src/genie/libs/ops/routing/iosxe/tests/routing_output.py
 
+Creating a --testbed file is pretty straight forward. Use the below command on the CLI
+
+genie create testbed --output <myfilelocation>
