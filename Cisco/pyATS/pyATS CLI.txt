@@ -1,0 +1,11 @@
+##Create a new testbed file with the following command:
+
+genie create testbed --output <myfilelocation>
+
+##Take a copy of a config with the following command:
+
+genie learn config --testbed-file <testbedfile> --output <location>
+
+##Compare two config files with the following command:
+
+genie diff <originalconfigfile> <changedconfigfile>
