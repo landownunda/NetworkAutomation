@@ -1,0 +1,17 @@
+from genie.testbed import load
+from genie.libs.conf.interface.iosxe import Interface
+
+testbed = load('sandboxcsr100v.yaml')
+device = testbed.devices['csr1000v-1']
+device.connect()
+
+#This part builds out your interface with an ipv4 address
+
+intf1 = Interface(name='Loopback601', device=device)
+intf1.description = 'This is a Test Interface made by pyATS - @CodingwithJon'
+intf1.ipv4 = '1.2.3.4/32'
+cfgs = intf1.build_config()
+
+device.disconnect()
+
+print("Your Python Script has run successfully")
