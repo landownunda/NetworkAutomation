@@ -9,3 +9,7 @@ genie learn config --testbed-file <testbedfile> --output <location>
 ##Compare two config files with the following command:
 
 genie diff <originalconfigfile> <changedconfigfile>
+
+##Parse a show command
+
+genie parse 'show version' --testbed-file <testbedfile> --output <location>
