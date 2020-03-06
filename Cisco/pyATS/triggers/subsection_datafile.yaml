@@ -1,0 +1,18 @@
+# This file define what to run before running any Trigger
+# They are part of the Common Setup and Common Cleanup
+#
+# In this case we only want to connect to the device
+setup:
+     sections:
+       connect:
+         method: genie.harness.commons.connect
+       configuration_snapshot:
+         method: genie.harness.commons.check_config
+     order: ['connect', 'configuration_snapshot']
+
+cleanup:
+      sections:
+       verify_configuration_snapshot:
+        method: genie.harness.commons.check_config
+        # method: genie.harness.commons.check_post_config
+      order: ['verify_configuration_snapshot']

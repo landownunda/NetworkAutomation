@@ -1,0 +1,8 @@
+#interface Testcase
+interface:
+    source:
+      #Python Path
+      #Directory.file.ClassName
+      class: examples.createInterface.createinterface.interface
+    devices: ['uut']
+
